@@ -1,0 +1,11 @@
+<div class="button-container">
+    <button type="button" (click)="lessPage()" [ngClass]="page === 1 ? 'disabled button' : 'button'"> - </button><span class="page-number">{{page}}</span><button type="button" (click)="morePage()" [ngClass]="page === lastPage ? 'disabled button' : 'button'"> + </button>
+</div>
+
+<div class="characters" *ngIf="result">
+    <div *ngFor="let character of result.results" class="characters-card">
+        <img src={{character.image}} alt={{character.name}} class="characters-image" [ngClass]="character.status === 'Alive' ? 'alive' : 'dead'" id={{character.id}}>
+        <h1 class="characters-name"  id={{character.id}}>{{character.name}}</h1>
+        <button type="button" class="button" (click)="btnClick(character.id)"> + </button>
+    </div>
+</div>

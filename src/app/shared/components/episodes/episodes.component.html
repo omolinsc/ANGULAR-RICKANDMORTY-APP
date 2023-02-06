@@ -1,0 +1,6 @@
+<div class="episodes" *ngIf="result">
+    <div *ngFor="let episode of result.results" class="episodes-card">
+        <h1 class="episodes-name">{{episode.name}}</h1>
+        <p class="episodes-name">{{episode.episode}}</p>
+    </div>
+</div>

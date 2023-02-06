@@ -1,0 +1,15 @@
+<p>Estamos en la ficha de personaje de: {{id}}</p>
+
+<div class="card" *ngIf="result">
+    <div class="card-img">
+        <img src={{result.image}} alt={{result.name}}>
+    </div>
+    <div class="card-info">
+        <p>ID: {{result.id}}</p>
+        <p>NOMBRE: {{result.name}}</p>
+        <p>GENERO: {{result.gender}}</p>
+        <p>ESTADO: {{result.status}}</p>
+        <p>RAZA: {{result.species}}</p>
+        <p>ORIGEN: {{result.origin.name}}</p>
+    </div>
+</div>

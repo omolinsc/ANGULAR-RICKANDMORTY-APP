@@ -1,0 +1,6 @@
+<div class="locations" *ngIf="result">
+    <div *ngFor="let location of result.results" class="locations-card">
+        <h1 class="locations-name">{{location.name}}</h1>
+    </div>
+</div>
+
